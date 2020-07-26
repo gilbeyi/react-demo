@@ -1,5 +1,5 @@
 import React from 'react';
-import 'assets/style/App.sass';
+import 'assets/style/App.scss';
 import Header from 'components/presentational/Header'
 
 const App = () => {
