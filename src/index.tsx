@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import 'assets/style/theme.css';
+import 'assets/style/style.scss';
 import DefaultLayout from 'layout/default';
 import IndexPage from 'pages/index'
 import reportWebVitals from 'reportWebVitals';
