@@ -6,7 +6,7 @@ type Props = {
 
 const DefaultLayout = ({ children }: Props) => {
  return (
-    <div>
+    <div className="layout__wrapper">
       {children}
     </div>
   )
