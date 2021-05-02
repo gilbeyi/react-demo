@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import 'assets/style/theme.css';
 import DefaultLayout from 'layout/default';
+import IndexPage from 'pages/index'
 import reportWebVitals from 'reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DefaultLayout />
+    <DefaultLayout>
+      <IndexPage />
+    </DefaultLayout>
   </React.StrictMode>,
   document.getElementById('root')
 );
