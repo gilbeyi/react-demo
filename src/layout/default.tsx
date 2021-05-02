@@ -1,11 +1,15 @@
 import React from 'react'
 
-export default class DefaultLayout extends React.Component {
-  render() {
-    return (
-      <div>
-        layout
-      </div>
-    )
-  }
+type Props = {
+  children: React.ReactNode;
 }
+
+const DefaultLayout = ({ children }: Props) => {
+ return (
+    <div>
+      {children}
+    </div>
+  )
+}
+
+export default DefaultLayout
