@@ -10,7 +10,7 @@ import {
 import AddPage from 'pages/add'
 import GroupPage from 'pages/group/index'
 
-const HomePage = () => {
+const IndexPage = () => {
   return (
     <div>
       <Router>
@@ -35,4 +35,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default IndexPage
