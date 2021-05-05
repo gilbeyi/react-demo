@@ -2,22 +2,33 @@ import React, { useState, useEffect } from 'react'
 
 import AppInput from 'components/atoms/AppInput'
 import AppButton from 'components/atoms/AppButton'
+import { useRender } from 'hooks/render'
 
 const AddPage = () => {
-  const [value, setValue] = useState('')
-  const [result, setResult] = useState('')
-  useEffect(() => {
-    setValue('初期値')
-  }, [])
-  const onClick = (_e: React.MouseEvent<HTMLElement>) => {
-    setResult(value)
+  const [state, dispatch] = useRender()
+  const setValue = (s: string) => {
+    dispatch({
+      type: 'edit',
+      payload: s
+    })
   }
+  const [result, setResult] = useState('')
+
+  useEffect(() => {
+    dispatch({ type: 'init' })
+  }, [dispatch])
+
+  const onClick = (_e: React.MouseEvent<HTMLElement>) => {
+    console.log(state.isEdit)
+    setResult(state.value)
+  }
+
   return (
     <div className="add__wrapper">
       Add
       <div>
         <AppInput
-          value={value}
+          value={state.value}
           className="add__input"
           onChange={setValue}
         />
